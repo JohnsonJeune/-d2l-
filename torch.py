@@ -541,8 +541,10 @@ class Residual(nn.Module):
 
 
 # Defined in file: ./chapter_recurrent-neural-networks/text-preprocessing.md
-torch.DATA_HUB['time_machine'] = (torch.DATA_URL + 'timemachine.txt',
+d2l.DATA_HUB['time_machine'] = (d2l.DATA_URL + 'timemachine.txt',
                                 '090b5e7e70c295757f55df93cb0a180b9691891a')
+
+
 def read_time_machine():
     """Load the time machine dataset into a list of text lines."""
     with open(d2l.download('time_machine'), 'r') as f:
@@ -849,8 +851,9 @@ class RNNModel(nn.Module):
 
 
 # Defined in file: ./chapter_recurrent-modern/machine-translation-and-dataset.md
+d2l.DATA_HUB['fra-eng'] = (d2l.DATA_URL + 'fra-eng.zip',
+                           '94646ad1522d915e7b0f9296181140edcf86a4f5')
 
-d2l.DATA_HUB['fra-eng'] = (d2l.DATA_URL + 'fra-eng.zip', '94646ad1522d915e7b0f9296181140edcf86a4f5')
 
 def read_data_nmt():
     """Load the English-French dataset."""
